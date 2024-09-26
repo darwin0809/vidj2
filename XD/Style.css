@@ -17,16 +17,16 @@ body {
     position: relative;
     text-align: center;
     color: white;
-}
-
-.background-image {
     width: 100%;
-    height: auto;
+    height: 100vh;
+    background-image: url('/tierraAgua.webp'); /* Aquí añades la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
 }
 
 .content {
     position: absolute;
-    top: 55%; /* Movido más abajo */
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -48,17 +48,103 @@ p {
 }
 
 .button {
-    padding: 15px 50px; /* Tamaño más uniforme */
+    padding: 15px 50px; 
     background-color: #007BFF;
     color: white;
     text-decoration: none;
     font-size: 1.2em;
-    border-radius: 50px; /* Forma ovalada */
+    border-radius: 50px; 
     width: 200px;
-    text-align: center;
 }
 
 .button:hover {
     background-color: #0056b3;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+}
+
+header {
+    background-color: #333;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.logo img {
+    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline;
+    position: relative; /* Necesario para el dropdown */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    border-radius: 10px;
+    padding: 10px 0;
+    top: 100%; /* Hace que el dropdown aparezca debajo del botón */
+    left: 0;
+    min-width: 160px;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: white;
+    border-radius: 0;
+}
+
+.dropdown-content a:hover {
+    background-color: #007BFF;
+}
+
+/* Mostrar el menú desplegable cuando esté activo */
+.show {
+    display: block;
+}
